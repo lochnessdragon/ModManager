@@ -16,6 +16,24 @@ repositories {
 	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
+	maven {
+		name = "Ladysnake Libs"
+		url = 'https://dl.bintray.com/ladysnake/libs'
+	}
+	maven {
+		name = "AdrianTodt's Maven"
+		url = "https://dl.bintray.com/adriantodt/maven"
+	}
+	maven {
+		name = "Jitpack"
+		url = "https://jitpack.io"
+	}
+	maven {
+		url "https://maven.jamieswhiteshirt.com/libs-release/"
+	}
+	maven {
+		url "https://maven.shedaniel.me/"
+	}
 }
 
 dependencies {
@@ -29,6 +47,7 @@ dependencies {
 
 	// PSA: Some older mods, compiled on Loom 0.2.1, might have outdated Maven POMs.
 	// You may need to force-disable transitiveness on them.
+	modImplementation "io.github.prospector:modmenu:${project.modmenu_version}"
 }
 
 processResources {
